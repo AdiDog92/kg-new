@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Главная</title>
+		<link rel="stylesheet" href="css/style.min.css" />
+		<style>
+			.pages {
+				height: 100vh;
+			}
+			.pages__inner {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+			}
+
+			.pages li:not(:last-child) {
+				margin-bottom: 24px;
+			}
+
+			.pages a {
+				display: block;
+				width: 500px;
+				padding: 16px;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 100%;
+				letter-spacing: 1.12px;
+				text-align: center;
+				text-transform: uppercase;
+				color: #fff;
+				background-color: #393a3f;
+				border-radius: 12px;
+				transition: .3s ease;
+			}
+			.pages a:hover {
+				color: #393a3f;
+				background-color: #FFD66B;
+			}	
+		</style>
+	</head>
+	<body>
+		<section class="pages"> 
+			<div class="container">
+				<div class="pages__inner">
+					<ul>
+						<li><a href="main.html" target="_blank">Главная</a></li>
+						<li><a href="setting.html" target="_blank">Настройка / Внедрение CRM</a></li>
+						<li><a href="teaching.html" target="_blank">Обучение Битрикс24 / CRM </a></li>
+						<li><a href="integration-key.html" target="_blank">Интеграция под ключ</a></li>
+						<li><a href="integraciya-crm-s-servisami.html" target="_blank">Интеграция CRM систем с сервисами</a></li>
+						<li><a href="integraciya-bitrix-s-1c.html" target="_blank">Интеграция Битрикс24 с 1с</a></li>
+						<li><a href="integraciya-bitrix-s-wa.html" target="_blank">Интеграция Битрикс24 с WhatsApp</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
