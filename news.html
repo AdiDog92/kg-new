@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#ffd455" />
+		<title>Document</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.min.css" />
+	</head>
+</html>
+
+<body>
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="header__top-inner">
+					<div class="header__city-select" data-bs-toggle="modal" data-bs-target="#regionalityModal">
+						<span class="text">Санкт-Петербург</span>
+						<span class="icon"></span>
+					</div>
+					<ul class="header__contacts-list">
+						<li class="header__contacts-item">
+							<a href="mailto:info@kiselevgroup.com" class="header__contacts-link">info@kiselevgroup.com</a>
+						</li>
+						<li class="header__contacts-item">
+							<p class="header__work-time">пн-пт с 9:00-18:00 МСК</p>
+						</li>
+						<li class="header__contacts-item">
+							<a href="tel:+7 (800) 246-55-35" class="header__contacts-link">+7 (800) 246-55-35</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<nav class="header__navbar navbar">
+			<div class="container">
+				<!-- container ===> justify-content-between -->
+				<div class="header__navbar-inner">
+					<div class="header__logo-inner">
+						<button
+							class="header__hamb navbar-toggler collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarToggleExternalContent"
+							aria-controls="navbarToggleExternalContent"
+							aria-expanded="false"
+							aria-label="Переключатель навигации"
+						>
+							<span class="header__hamb-icon navbar-toggler-icon"></span>
+						</button>
+						<a class="header__logo-link navbar-brand" href="/">
+							<img src="images/logo.svg" alt="kiselevgroup" class="header__logo-img" />
+						</a>
+					</div>
+					<ul class="header__nav-list nav justify-content-center">
+						<li class="header__nav-item nav-item">
+							<a class="header__nav-link nav-link" href="#">Услуги</a>
+						</li>
+						<li class="header__nav-item nav-item">
+							<a class="header__nav-link nav-link" href="#">Купить лицензию</a>
+						</li>
+						<li class="header__nav-item nav-item">
+							<a class="header__nav-link nav-link" href="#">Кейсы</a>
+						</li>
+						<li class="header__nav-item nav-item">
+							<a class="header__nav-link nav-link" href="#">О компании</a>
+						</li>
+						<li class="header__nav-item nav-item">
+							<a class="header__nav-link nav-link" href="#">Контакты</a>
+						</li>
+					</ul>
+					<div class="header__callback-inner">
+						<button
+							type="button"
+							class="header__callback"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#collapseForm"
+							aria-expanded="false"
+							aria-controls="collapseForm"
+						>
+							Заказать звонок
+						</button>
+						<div class="collapse header__collapse-form-inner" id="collapseForm">
+							<form>
+								<input
+									type="tel"
+									class="form-control header__form-control"
+									id="exampleInputTel"
+									aria-describedby="telHelp"
+									placeholder="Введите телефон"
+								/>
+								<button type="submit" class="btn btn-primary header__form-submit">Заказать звонок</button>
+								<div class="form-check header__form-check">
+									<input type="checkbox" class="form-check-input header__form-check-input" id="exampleCheck1" checked />
+									<label class="form-check-label header__form-check-label" for="exampleCheck1"
+										>Нажимая на кнопку вы соглашаетесь с условиями <a href="#"> Политики конфиденциальности </a></label
+									>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="header__offcanvas collapse" id="navbarToggleExternalContent">
+					<div class="header__offcanvas-body offcanvas-body row justify-content-between">
+						<div class="col-lg-6 col-md-8 row">
+							<div class="col-md-4 dropdown">
+								<h3 class="header__offcanvas-list-title">Внедрение</h3>
+								<ul class="header__offcanvas-list">
+									<li class="header__offcanvas-item">
+										<a href="#">Техническое задание </a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Настройка</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Обучение</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Сопровождение</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Техподдержка</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-4 dropdown">
+								<h3 class="header__offcanvas-list-title">Интеграция</h3>
+								<ul class="header__offcanvas-list">
+									<li class="header__offcanvas-item">
+										<a href="#">1С - двухсторонний</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Телефония</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Сайт</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Соц.сети</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Мессенджеры</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Почта</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-4 dropdown">
+								<h3 class="header__offcanvas-list-title">Доработка</h3>
+								<ul class="header__offcanvas-list">
+									<li class="header__offcanvas-item">
+										<a href="#">Аудит</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">BI-Аналитика</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Отдел Контроль Качества</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-lg-6 col-12 dropdown d-block d-md-none">
+								<h3 class="header__offcanvas-list-title">Купить лицензию</h3>
+								<ul class="header__offcanvas-list">
+									<li class="header__offcanvas-item">
+										<a href="#">Облако</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Корпоративный портал</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Маркет Плюс</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Энтерпрайз</a>
+									</li>
+								</ul>
+								<ul class="header__offcanvas-list">
+									<li class="header__offcanvas-item">
+										<a href="#">
+											<b>Готовые решения</b>
+										</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">
+											<b>Кейсы</b>
+										</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">
+											<b>О компании</b>
+										</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">
+											<b>Контакты</b>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col">
+								<a href="mailto:info@kiselevgroup.com" class="header__mail-link">info@kiselevgroup.com</a>
+								<a href="tel:+7 343 247-24-20" class="header__phone-link">+7 343 247-24-20</a>
+								<ul class="header__offcanvas-social-list">
+									<li class="header__offcanvas-social-item">
+										<a href="#" class="header__offcanvas-social-link youtube">
+											<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													fill-rule="evenodd"
+													clip-rule="evenodd"
+													d="M2.26054 15.049C1.86827 14.9329 1.51036 14.7265 1.217 14.447C0.923646 14.1676 0.70345 13.8234 0.574994 13.4434C-0.159032 11.4796 -0.376522 3.27912 1.03716 1.66026C1.50766 1.13364 2.17194 0.809406 2.88582 0.757947C6.67829 0.359867 18.3955 0.412945 19.7412 0.89064C20.1197 1.01051 20.4655 1.21244 20.7527 1.48131C21.0399 1.75018 21.2611 2.079 21.3996 2.44315C22.2016 4.47336 22.2288 11.8511 21.2909 13.8017C21.0421 14.3094 20.6255 14.7207 20.1083 14.9694C18.6946 15.6594 4.13638 15.6461 2.26054 15.049ZM8.28227 11.2009L15.0788 7.75088L8.28227 4.27432V11.2009Z"
+													fill="currentColor"
+												/>
+											</svg>
+										</a>
+									</li>
+									<li class="header__offcanvas-social-item">
+										<a href="#" class="header__offcanvas-social-link vk">
+											<svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M11.9845 13.9961C4.46791 13.9961 0.180592 8.74084 0.00195312 -0.00390625H3.7671C3.89077 6.41451 6.66654 9.13323 8.86517 9.69379V-0.00390625H12.4105V5.53163C14.5816 5.29339 16.8627 2.77087 17.6322 -0.00390625H21.1775C20.8875 1.43517 20.3095 2.79775 19.4796 3.99859C18.6496 5.19944 17.5857 6.21273 16.3542 6.97507C17.7288 7.67165 18.9429 8.65759 19.9165 9.86784C20.89 11.0781 21.6008 12.4851 22.002 13.9961H18.0994C17.7393 12.6837 17.0073 11.5089 15.9953 10.6189C14.9833 9.72893 13.7363 9.16337 12.4105 8.99309V13.9961H11.9845Z"
+													fill="currentColor"
+												/>
+											</svg>
+										</a>
+									</li>
+									<li class="header__offcanvas-social-item">
+										<a href="#" class="header__offcanvas-social-link wa">
+											<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M17.9268 3.05469C15.9512 1.08594 13.3171 -0.0078125 10.5366 -0.0078125C4.75609 -0.0078125 0.0731696 4.65885 0.0731696 10.4193C0.0731696 12.2422 0.585366 14.0651 1.46341 15.5963L0 20.9922L5.56098 19.5338C7.09756 20.3359 8.78048 20.7734 10.5366 20.7734C16.3171 20.7734 21 16.1068 21 10.3464C20.9268 7.64844 19.9024 5.02344 17.9268 3.05469ZM15.5854 14.138C15.3658 14.7213 14.3415 15.3047 13.8293 15.3776C13.3902 15.4505 12.8049 15.4505 12.2195 15.3047C11.8537 15.1588 11.3415 15.013 10.7561 14.7214C8.12195 13.6276 6.43902 11.0026 6.29268 10.7839C6.14634 10.638 5.19512 9.39843 5.19512 8.08593C5.19512 6.77343 5.85366 6.1901 6.07317 5.89843C6.29268 5.60677 6.58536 5.60677 6.80487 5.60677C6.95122 5.60677 7.17073 5.60677 7.31707 5.60677C7.46341 5.60677 7.68292 5.53385 7.90244 6.04427C8.12195 6.55469 8.63414 7.86718 8.70731 7.9401C8.78048 8.08593 8.78048 8.23177 8.70731 8.3776C8.63414 8.52343 8.56097 8.66927 8.41463 8.8151C8.26829 8.96093 8.12195 9.17968 8.04877 9.2526C7.90243 9.39843 7.75609 9.54427 7.90244 9.76302C8.04878 10.0547 8.56097 10.8568 9.36585 11.5859C10.3902 12.4609 11.1951 12.7526 11.4878 12.8984C11.7805 13.0443 11.9268 12.9713 12.0732 12.8255C12.2195 12.6797 12.7317 12.0964 12.878 11.8047C13.0244 11.513 13.2439 11.5859 13.4634 11.6589C13.6829 11.7318 15 12.388 15.2195 12.5339C15.5122 12.6797 15.6585 12.7526 15.7317 12.8255C15.8049 13.0443 15.8049 13.5547 15.5854 14.138Z"
+													fill="currentColor"
+												/>
+											</svg>
+										</a>
+									</li>
+									<li class="header__offcanvas-social-item">
+										<a href="#" class="header__offcanvas-social-link tg">
+											<svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M19 0.594413L15.9946 16.2845C15.9946 16.2845 15.5741 17.3723 14.4189 16.8506L7.48457 11.3448L7.45242 11.3285C8.38909 10.4576 15.6524 3.69485 15.9698 3.38831C16.4613 2.91355 16.1562 2.63092 15.5856 2.98955L4.85679 10.0452L0.717638 8.60296C0.717638 8.60296 0.0662573 8.36302 0.00359284 7.8413C-0.0598961 7.31872 0.739076 7.03609 0.739076 7.03609L17.6131 0.181135C17.6131 0.181135 19 -0.449883 19 0.594413Z"
+													fill="currentColor"
+												/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-4 row d-md-flex d-none">
+							<div class="col-lg-6 col-12 dropdown">
+								<h3 class="header__offcanvas-list-title">Купить лицензию</h3>
+								<ul class="header__offcanvas-list">
+									<li class="header__offcanvas-item">
+										<a href="#">Облако</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Корпоративный портал</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Маркет Плюс</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">Энтерпрайз</a>
+									</li>
+								</ul>
+								<ul class="header__offcanvas-list">
+									<li class="header__offcanvas-item">
+										<a href="#">
+											<b>Готовые решения</b>
+										</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">
+											<b>Кейсы</b>
+										</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">
+											<b>О компании</b>
+										</a>
+									</li>
+									<li class="header__offcanvas-item">
+										<a href="#">
+											<b>Контакты</b>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-6 d-lg-block d-none">
+								<div class="header__offcanvas-prev">
+									<img class="header__offcanvas-img" src="images/offcanvas-prev-1.png" alt="Акция" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+</body>
+
+
+<main>
+	<section class="news-list mb-24 mobile-light-section">
+		<div class="container">
+			<div class="news-list__inner light-inner">
+				<div class="news-list__head-inner">
+					<nav class="news-list__nav" style="--bs-breadcrumb-divider: '|'" aria-label="breadcrumb">
+						<ol class="news-list__breadcrumb breadcrumb">
+							<li class="news-list__breadcrumb-item breadcrumb-item">
+								<a href="#">
+									<span class="icon"></span>
+									<span class="text">Новости</span>
+								</a>
+							</li>
+							<li class="news-list__breadcrumb-item breadcrumb-item active" aria-current="page">Внедрение</li>
+						</ol>
+					</nav>
+					<h2 class="news-list__title title">Новости</h2>
+				</div>
+				<div class="news-list__body-inner">
+					<div class="d-flex align-items-start justify-content-between">
+						<div
+							class="news-list__link-wrapper nav"
+							id="v-pills-tab"
+							role="tablist"
+							aria-orientation="vertical"
+						>
+							<h3 class="news-list__nav-title">Блог</h3>
+							<button
+								class="news-list__nav-link nav-link active"
+								id="implementation-tab"
+								data-bs-toggle="pill"
+								data-bs-target="#implementation"
+								type="button"
+								role="tab"
+								aria-controls="implementation"
+								aria-selected="true"
+							>
+								<span class="text">Внедрение</span>
+								<span class="icon"></span>
+							</button>
+							<button
+								class="news-list__nav-link nav-link"
+								id="integration-tab"
+								data-bs-toggle="pill"
+								data-bs-target="#integration"
+								type="button"
+								role="tab"
+								aria-controls="integration"
+								aria-selected="false"
+							>
+								<span class="text">Интеграция</span>
+								<span class="icon"></span>
+							</button>
+							<button
+								class="news-list__nav-link nav-link"
+								id="licenses-type-tab"
+								data-bs-toggle="pill"
+								data-bs-target="#licenses-type"
+								type="button"
+								role="tab"
+								aria-controls="licenses-type"
+								aria-selected="false"
+							>
+								<span class="text">Типы лицензий</span>
+								<span class="icon"></span>
+							</button>
+							<button
+								class="news-list__nav-link nav-link"
+								id="telephony-tab"
+								data-bs-toggle="pill"
+								data-bs-target="#telephony"
+								type="button"
+								role="tab"
+								aria-controls="telephony"
+								aria-selected="false"
+							>
+								<span class="text">Телефония</span>
+								<span class="icon"></span>
+							</button>
+							<button
+								class="news-list__nav-link nav-link"
+								id="portalAudit-tab"
+								data-bs-toggle="pill"
+								data-bs-target="#portalAudit"
+								type="button"
+								role="tab"
+								aria-controls="portalAudit"
+								aria-selected="false"
+							>
+								<span class="text">Аудит портала</span>
+								<span class="icon"></span>
+							</button>
+							<button
+								class="news-list__nav-link nav-link"
+								id="BiAnalytics-tab"
+								data-bs-toggle="pill"
+								data-bs-target="#BiAnalytics"
+								type="button"
+								role="tab"
+								aria-controls="BiAnalytics"
+								aria-selected="false"
+							>
+								<span class="text">BI-Аналитика</span>
+								<span class="icon"></span>
+							</button>
+							<button
+								class="news-list__nav-link nav-link"
+								id="QCD-tab"
+								data-bs-toggle="pill"
+								data-bs-target="#QCD"
+								type="button"
+								role="tab"
+								aria-controls="QCD"
+								aria-selected="false"
+							>
+								<span class="text">Отдел Контроль Качества</span>
+								<span class="icon"></span>
+							</button>
+							<button
+								class="news-list__nav-link nav-link"
+								id="1c-double-sided-tab"
+								data-bs-toggle="pill"
+								data-bs-target="#1c-double-sided"
+								type="button"
+								role="tab"
+								aria-controls="1c-double-sided"
+								aria-selected="false"
+							>
+								<span class="text">1C - двухсторонний (в режиме онлайн)</span>
+								<span class="icon"></span>
+							</button>
+							<button
+								class="news-list__nav-link nav-link"
+								id="technicalSpecification-tab"
+								data-bs-toggle="pill"
+								data-bs-target="#technicalSpecification"
+								type="button"
+								role="tab"
+								aria-controls="technicalSpecification"
+								aria-selected="false"
+							>
+								<span class="text">Техническое задание</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="news-list__tab-content tab-content" id="v-pills-tabContent">
+							<div
+								class="news-list__tab-panel tab-pane fade show active"
+								id="implementation"
+								role="tabpanel"
+								aria-labelledby="implementation-tab"
+								tabindex="0"
+							>
+								<div class="news-list__card card">
+									<div class="news-list__card-wrapper row g-0">
+										<div class="news-list__prew col-lg-4">
+											<img src="images/news-prew.png" class="news-list__card-img img-fluid" alt="Заголовок карточки" />
+										</div>
+										<div class="col-lg-8">
+											<div class="news-list__card-body">
+												<span class="news-list__card-badge">Внедрение</span>
+												<span class="news-list__card-badge">7 мая</span>
+												<a href="#" class="news-list__card-link">
+													<h5 class="news-list__card-title">
+														Увеличим прибыль компании с помощью независимого отдела контроля качества с помощью
+														независимого отдела...
+													</h5>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+	
+								<button class="news-list__show-more transparent-btn">Смотреть еще новости</button>
+							</div>
+							<div class="tab-pane fade" id="integration" role="tabpanel" aria-labelledby="integration-tab" tabindex="0">
+								Интеграция
+							</div>
+							<div
+								class="tab-pane fade"
+								id="licenses-type"
+								role="tabpanel"
+								aria-labelledby="licenses-type-tab"
+								tabindex="0"
+							>
+								Типы лицензий
+							</div>
+							<div class="tab-pane fade" id="telephony" role="tabpanel" aria-labelledby="telephony-tab" tabindex="0">
+								Телефония
+							</div>
+							<div class="tab-pane fade" id="portalAudit" role="tabpanel" aria-labelledby="portalAudit-tab" tabindex="0">
+								Аудит портала
+							</div>
+							<div class="tab-pane fade" id="BiAnalytics" role="tabpanel" aria-labelledby="BiAnalytics-tab" tabindex="0">
+								BI-Аналитика
+							</div>
+							<div class="tab-pane fade" id="QCD" role="tabpanel" aria-labelledby="QCD-tab" tabindex="0">
+								Отдел Контроль Качества
+							</div>
+							<div
+								class="tab-pane fade"
+								id="1c-double-sided"
+								role="tabpanel"
+								aria-labelledby="1c-double-sided-tab"
+								tabindex="0"
+							>
+								1C - двухсторонний (в режиме онлайн)
+							</div>
+							<div
+								class="tab-pane fade"
+								id="technicalSpecification"
+								role="tabpanel"
+								aria-labelledby="technicalSpecification-tab"
+								tabindex="0"
+							>
+								Техническое задание
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="about-us">
+		<div class="container">
+			<div class="about-us__inner row">
+				<div class="col-xl-6">
+					<div class="about-us__card about-us__card--dark">
+						<div class="about-us__card-text-inner">
+							<h2 class="about-us__card-title">Опыт в большом количестве направлений</h2>
+							<p class="about-us__card-text">
+								Благодаря этому мы можем решать задачи по адекватной стоимости и с безупречным качеством
+							</p>
+							<a href="#" class="about-us__link">Смотреть готовые решения</a>
+						</div>
+						<div class="about-us__card-prev">
+							<img
+								class="about-us__card-img"
+								class="about-us__card-img"
+								src="images/about-us-1.png"
+								alt="Опыт в большом количестве направлений"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="about-us__card about-us__card--light">
+						<div class="about-us__card-text-inner">
+							<h2 class="about-us__card-title">О компании <br />KISELEV GROUP</h2>
+							<p class="about-us__card-text">
+								Мы внедряем БИТРИКС24, это СRМ система которая занимает первое место среди инструментов для автоматизации
+								бизнеса. Битрикс24-это уникальный продукт который подходит практически для всех сфер бизнеса.
+							</p>
+							<a href="#" class="about-us__link">Узнать больше о нас</a>
+						</div>
+						<div class="about-us__card-prev px-4">
+							<img
+								class="about-us__card-img"
+								src="images/about-us-2.png"
+								alt="Команда KISELEV GROUP"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="about-us__card about-us__card--light">
+						<div class="about-us__card-text-inner">
+							<h2 class="about-us__card-title">Кейсы <br />в 50 нишах</h2>
+							<p class="about-us__descr orange">Мы внедрили более 400 CRM</p>
+							<p class="about-us__card-text">Разработали готовые, технологичные решения для различных отраслей бизнеса</p>
+							<a href="#" class="about-us__link">Смотреть кейсы</a>
+						</div>
+						<div class="about-us__card-prev px-4">
+							<img
+								class="about-us__card-img"
+								src="images/about-us-3.png"
+								alt="Кейсы"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="about-us__card about-us__card--dark">
+						<div class="about-us__card-text-inner">
+							<h2 class="about-us__card-title">Входим в ТОП-10 <br />интеграторов по РФ</h2>
+							<p class="about-us__descr orange">Специализируемся только на&nbsp;Битрикс24</p>
+							<p class="about-us__card-text">
+								Точная фокусировка позволяет достичь высочайшей компетенции. Все сотрудники имеют сертификаты экспертов.
+							</p>
+							<a href="#" class="about-us__link">Смотреть сертификаты</a>
+						</div>
+						<div class="about-us__card-prev about-us__card-prev--with-text">
+							<img class="about-us__card-img" src="images/about-us-cup.svg" alt="Мы золотой партнер Битрикс 24" />
+							<h4 class="about-us__card-subtitle">Мы золотой партнер Битрикс 24</h4>
+							<p class="about-us__card-text">
+								Статус присваивается только тем компаниям, к услугам которых нет нареканий от заказчиков
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="big-form__form-inner">
+					<h2 class="big-form__form-descr">
+						Получайте до 40% больше продаж за счет настройки эффективных каналов маркетинга и улучшения работы сотрудников
+					</h2>
+					<form class="big-form__form">
+						<div class="big-form__input-wrapper">
+							<input type="tel" class="form__input" placeholder="Введите ваш телефон" />
+						</div>
+						<div class="big-form__submit-wrapper">
+							<button type="submit" class="form__submit-button">Получить консультацию</button>
+							<span class="big-form__submit-text">- это бесплатно</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer class="footer">
+
+	<div class="container">
+
+		<div class="footer-inner">
+
+			<div class="footer__contacts">
+
+				<div class="row justify-content-between">
+
+					<div class="col-md-7">
+
+						<a href="mailto:info@kiselevgroup.com" class="footer__mail-link">info@kiselevgroup.com</a>
+
+						<a href="tel:+7 343 247-24-20" class="footer__phone-link">+7 343 247-24-20</a>
+
+					</div>
+
+					<div class="col-md-5">
+
+						<p class="footer__social-text">Пишите или звоните по любым вопросам</p>
+
+						<ul class="footer__social-list">
+
+							<li class="footer__social-item">
+
+								<button class="footer__callback item-color">Заказать звонок</button>
+
+							</li>
+
+							<li class="footer__social-item">
+
+								<a href="#" class="footer__social-link item-color youtube">
+
+									<svg width="28" height="19" viewBox="0 0 28 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.51186 18.1479C3.04115 18.0086 2.61165 17.7608 2.25962 17.4255C1.90759 17.0902 1.64336 16.6771 1.48921 16.2212C0.60838 13.8645 0.347393 4.024 2.04381 2.08138C2.60841 1.44943 3.40555 1.06035 4.2622 0.998598C8.81316 0.520903 22.8738 0.584596 24.4887 1.15783C24.9429 1.30167 25.3579 1.54399 25.7025 1.86663C26.0471 2.18927 26.3125 2.58386 26.4787 3.02084C27.4411 5.45709 27.4737 14.3104 26.3482 16.6511C26.0497 17.2604 25.5498 17.7539 24.9291 18.0523C23.2327 18.8803 5.76288 18.8644 3.51186 18.1479ZM10.7379 13.5301L18.8938 9.39012L10.7379 5.21824V13.5301Z" fill="white"/>
+
+										</svg>
+
+								</a>
+
+							</li>
+
+							<li class="footer__social-item">
+
+								<a href="#" class="footer__social-link item-color vk">
+
+									<svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+										<path d="M15.1817 17.0871C6.16189 17.0871 1.0171 10.7808 0.802734 0.287109H5.32091C5.46932 7.98921 8.80024 11.2517 11.4386 11.9243V0.287109H15.6929V6.92975C18.2983 6.64386 21.0356 3.61684 21.959 0.287109H26.2134C25.8654 2.014 25.1718 3.64909 24.1759 5.09011C23.18 6.53113 21.9032 7.74707 20.4255 8.66188C22.075 9.49777 23.5319 10.6809 24.7001 12.1332C25.8684 13.5855 26.7213 15.2739 27.2027 17.0871H22.5197C22.0875 15.5122 21.2092 14.1025 19.9948 13.0345C18.7804 11.9665 17.2839 11.2878 15.6929 11.0835V17.0871H15.1817Z" fill="white"/>
+
+										</svg>
+
+								</a>
+
+							</li>
+
+							<li class="footer__social-item">
+
+								<a href="#" class="footer__social-link item-color wa">
+
+									<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+										<path d="M21.5122 4.15937C19.1415 1.79687 15.9805 0.484375 12.6439 0.484375C5.70731 0.484375 0.0878035 6.08437 0.0878035 12.9969C0.0878035 15.1844 0.702439 17.3719 1.7561 19.2094L0 25.6844L6.67317 23.9344C8.51707 24.8969 10.5366 25.4219 12.6439 25.4219C19.5805 25.4219 25.2 19.8219 25.2 12.9094C25.1122 9.67187 23.8829 6.52187 21.5122 4.15937ZM18.7024 17.4594C18.439 18.1594 17.2097 18.8594 16.5951 18.9469C16.0683 19.0344 15.3658 19.0344 14.6634 18.8594C14.2244 18.6844 13.6097 18.5094 12.9073 18.1594C9.74634 16.8469 7.72683 13.6969 7.55122 13.4344C7.37561 13.2594 6.23415 11.7719 6.23415 10.1969C6.23415 8.62187 7.02439 7.92187 7.2878 7.57187C7.55122 7.22187 7.90243 7.22187 8.16585 7.22187C8.34146 7.22187 8.60487 7.22187 8.78048 7.22187C8.95609 7.22187 9.21951 7.13437 9.48292 7.74687C9.74634 8.35937 10.361 9.93437 10.4488 10.0219C10.5366 10.1969 10.5366 10.3719 10.4488 10.5469C10.361 10.7219 10.2732 10.8969 10.0976 11.0719C9.92194 11.2469 9.74633 11.5094 9.65853 11.5969C9.48292 11.7719 9.30731 11.9469 9.48292 12.2094C9.65853 12.5594 10.2732 13.5219 11.239 14.3969C12.4683 15.4469 13.4341 15.7969 13.7854 15.9719C14.1366 16.1469 14.3122 16.0594 14.4878 15.8844C14.6634 15.7094 15.278 15.0094 15.4537 14.6594C15.6293 14.3094 15.8927 14.3969 16.1561 14.4844C16.4195 14.5719 18 15.3594 18.2634 15.5344C18.6146 15.7094 18.7902 15.7969 18.878 15.8844C18.9658 16.1469 18.9658 16.7594 18.7024 17.4594Z" fill="white"/>
+
+										</svg>
+
+								</a>
+
+							</li>
+
+							<li class="footer__social-item">
+
+								<a href="#" class="footer__social-link item-color tg">
+
+									<svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+										<path d="M23.6008 0.806655L19.9943 19.6347C19.9943 19.6347 19.4897 20.9401 18.1035 20.3141L9.78227 13.7071L9.74368 13.6876C10.8677 12.6425 19.5837 4.52718 19.9646 4.15933C20.5543 3.58962 20.1882 3.25046 19.5035 3.68082L6.62893 12.1476L1.66195 10.4169C1.66195 10.4169 0.88029 10.129 0.805093 9.50291C0.728906 8.87582 1.68767 8.53666 1.68767 8.53666L21.9365 0.310722C21.9365 0.310722 23.6008 -0.4465 23.6008 0.806655Z" fill="white"/>
+
+										</svg>
+
+								</a>
+
+							</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="footer__center">
+
+				<div class="row ">
+
+					<div class="col-md-7">
+
+						<img class="foter__company-name" src="images/footer-text.svg" alt="kiselevgroup">
+
+					</div>
+
+					<div class="col-md-5">
+
+						<address class="footer__addres">
+
+							<p class="footer__subtitle-info">БЭК-Офис</p>
+
+							<p class="footer__info-text">г. Екатеринбург, ул. Щорса, д.57, оф.6</p>
+
+						</address>
+
+						<div class="footer__director">
+
+							<p class="footer__subtitle-info">Директор KISELEV GROUP</p>
+
+							<p class="footer__info-text">Константин Киселёв</p>
+
+							<a href="tel:+7 922 226-99-77" class="footer__director-phone footer__info-text">+7 (922) 226-99-77</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<nav class="footer__nav">
+
+				<div class="row">
+
+					<div class="col-lg-7 col-md-9">
+
+						<div class="row">
+
+							<div class="col-md-4 col-6">
+
+								<h4 class="footer__list-title">
+
+									<a href="#" class="footer__list-title-link">Внедрение</a>
+
+								</h4>
+
+								<ul class="footer__nav-list">
+
+									<li class="footer__nav-item">
+
+										<a href="#" class="footer__nav-link">Техническое задание</a>
+
+										</li>
+
+									<li class="footer__nav-item">
+
+										<a href="#" class="footer__nav-link">Настройка</a>
+
+										</li>
+
+									<li class="footer__nav-item">
+
+										<a href="#" class="footer__nav-link">Обучение</a>
+
+										</li>
+
+									<li class="footer__nav-item">
+
+										<a href="#" class="footer__nav-link">Сопровождение</a>
+
+										</li>
+
+									<li class="footer__nav-item">
+
+										<a href="#" class="footer__nav-link">Техподержка</a>
+
+										</li>
+
+								</ul>
+
+							</div>
+
+							<div class="col-md-4 col-6">
+
+								<h4 class="footer__list-title">
+
+									<a href="#" class="footer__list-title-link">Интеграция</a>
+
+								</h4>
+
+								<ul class="footer__nav-list">
+
+									<li class="footer__nav-item">
+
+										<a href="#" class="footer__nav-link">1С - двухсторонний</a>
+
+									</li>
+
+									<li class="footer__nav-item">
+
+										<a href="#" class="footer__nav-link">Телефония</a>
+
+										</li>
+
+									<li class="footer__nav-item">
+
+										<a href="#" class="footer__nav-link">Сайт</a>
+
+										</li>
+
+									<li class="footer__nav-item">
+
+										<a href="#" class="footer__nav-link">Соц сети</a>
+
+										</li>
+
+									<li class="footer__nav-item">
+
+										<a href="#" class="footer__nav-link">Мессенджеры</a>
+
+										</li>
+
+									<li class="footer__nav-item">
+
+										<a href="#" class="footer__nav-link">Почта</a>
+
+										</li>
+
+								</ul>
+
+							</div>
+
+							<div class="col-lg-3 col-md-4">
+
+								<h4 class="footer__list-title">
+
+									<a href="#" class="footer__list-title-link">Доработка</a>
+
+								</h4>
+
+								<ul class="footer__nav-list">
+
+									<li class="footer__nav-item">
+
+										
+
+									<a href="#" class="footer__nav-link">Аудит</a>
+
+									</li>
+
+									<li class="footer__nav-item">
+
+										
+
+									<a href="#" class="footer__nav-link">BI-Аналитика</a>
+
+									</li>
+
+									<li class="footer__nav-item">
+
+										
+
+									<a href="#" class="footer__nav-link">Отдел Контроль Качества</a>
+
+									</li>
+
+								</ul>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="col-lg-2 col-md-3">
+
+						<ul class="footer__nav-list">
+
+							<li class="footer__nav-item">
+
+								<a href="#" class="footer__nav-link"><b>Готовые решения</b></a>
+
+								</li>
+
+							<li class="footer__nav-item">
+
+								<a href="#" class="footer__nav-link"><b>Купить лицензию</b></a>
+
+								</li>
+
+							<li class="footer__nav-item">
+
+								<a href="#" class="footer__nav-link"><b>Кейсы</b></a>
+
+								</li>
+
+							<li class="footer__nav-item">
+
+								<a href="#" class="footer__nav-link"><b>О компании</b></a>
+
+								</li>
+
+							<li class="footer__nav-item">
+
+								<a href="#" class="footer__nav-link"><b>Контакты</b></a>
+
+								</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</nav>
+
+			<div class="footerl__policy">
+
+				<div class="row justify-content-between align-items-center">
+
+					<div class="col-md-5">
+
+					<p class="footer__policy-text">© 2016-2021 ООО «КИСЕЛЕВ ГРУПП»</p>
+
+					</div>
+
+					<div class="col-md-5">
+
+						<a href="#" class="footer__policy-link">Политика конфиденциальности</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src='js/inputmask.js'></script>
+
+<script src='js/app.js'></script>
+
+</body>
+
+</html>
